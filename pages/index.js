@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import { useState,useEffect } from 'react'
 
 export default function Home() {
-  const [session_time_left,set_session_time_left] = useState(25)
+  const [session_time_left,set_session_time_left] = useState("25:00")
   const [session_length, set_session_length] = useState(25)
   const [break_length, set_break_length] = useState(5)
   const [on_break, set_on_break] = useState(false)
@@ -15,17 +15,20 @@ export default function Home() {
   const [session_timer,set_session_timer] = useState(true)
 
   const reset =()=>{
+    clearInterval(session_interval)
+
     set_break_length(5)
+
     set_on_break(false)
     set_session_length(25)
-    set_session_time_left("00:00")
-    clearInterval(session_interval)
+    set_session_time_left("25" + ":" + "00")
     set_is_paused(true)
     set_distance(0)
 
   }
 
   const start_session_countdown=(countDownDate)=>{
+    console.log("SESSION LENGTH " + session_length)
     set_interval(setInterval(function() {
       // Get today's date and time
       var now = new Date().getTime();
@@ -86,11 +89,11 @@ export default function Home() {
 
     }else if(name == "session-decrement" && session_length > 1 && is_paused){
       set_session_length(session_length -1)
-      set_session_time_left(session_length-1)
+      set_session_time_left(session_length-1  +":"+"00" )
 
     }else if(name == "session-increment" &&  session_length < 60 && is_paused){
       set_session_length(session_length +1)
-      set_session_time_left(session_length+1)
+      set_session_time_left(session_length+1 +":"+"00" )
 
     }
 

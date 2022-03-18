@@ -44,7 +44,7 @@ button{
   margin: 2%;
   color: rgb(255, 255, 255);
   box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.7);
-  padding: 3%;
+  padding: 4%;
   font-weight:bolder;
 
 
@@ -94,7 +94,6 @@ main{
 
 .outer-div{
   text-align: center;
-
   background-color: #ab7aab;
   padding: 2%;
   min-width:fit-content;
