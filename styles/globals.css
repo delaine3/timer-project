@@ -13,4 +13,94 @@ a {
 
 * {
   box-sizing: border-box;
+  justify-content: center;
+}
+
+.time-remaining{
+  min-width:fit-content;
+  width: 40%;
+  padding: 1.5rem;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #4bc5c5;
+  border: 1px solid #eaeaea;
+  margin: 1%;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.7);
+
+
+}
+.upper-divs{
+  min-width:fit-content;
+  padding: 1.5rem;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #4bc5c5;
+  border: 1px solid #eaeaea;
+  margin: 1%;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.7);
+
+}
+button{
+  margin: 2%;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.7);
+  padding: 3%;
+  font-weight:bolder;
+
+
+}
+button:hover{
+  text-shadow: 0px 0px 4px rgb(255, 255, 255);
+  box-shadow: 0 0 10px 0 rgba(43, 35, 35, 0.7);
+  color: rgb(116, 108, 108);
+}
+
+button.increment{
+  background-color: rgb(130, 218, 63);
+
+}
+
+button.decrement{
+  background-color: rgb(249, 160, 63);
+
+}
+
+button.start{
+  background-color: #3EC300
+}
+
+button.pause{
+  background-color: rgb(253, 154, 245)
+}
+button.reset{
+  background-color: #F2C14E
+}
+p{
+  text-shadow: 0px 0px 4px rgb(255, 255, 255);
+  text-align: center;
+}
+label{
+  font-size: x-large;
+  text-shadow: 0px 0px 4px rgb(255, 255, 255);
+  justify-content: center;
+}
+
+main{
+  background-color: #7A82AB;
+  text-align: center;
+  padding: 5%;
+  
+}
+
+.outer-div{
+  text-align: center;
+
+  background-color: #ab7aab;
+  padding: 2%;
+  min-width:fit-content;
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+  border: 1px solid #eaeaea;
+
 }
