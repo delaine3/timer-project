@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useState,useEffect } from 'react'
 
@@ -48,6 +47,7 @@ export default function Home() {
         clearInterval(session_interval)
         set_session_time_left("00" + ":" + "00")
         set_session_timer(false)
+        set_on_break(true)
         return
       }
     }, 1000))
