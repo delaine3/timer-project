@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import ReactAudioPlayer from 'react-audio-player';
 import { useState,useEffect } from 'react'
 
 export default function Home() {
@@ -35,7 +36,7 @@ export default function Home() {
       document.getElementById("timer-label").innerHTML = "Session"
 
     }
-  });
+  },[]);
 
   const reset =()=>{
     clearInterval(session_interval)
@@ -182,6 +183,11 @@ const start_break_countdown =()=> {
          <button className='decrement' id="break-decrement" name='break-decrement' value={break_length} onClick={(event) => {
         handle_change(event)}} >-</button>
        </div>
+       <ReactAudioPlayer
+  src="my_audio_file.ogg"
+  autoPlay
+  controls
+/>
 
        <div className='upper-divs'>
          <label  id="session-label">Session Length</label>
