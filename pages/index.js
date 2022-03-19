@@ -208,9 +208,9 @@ const start_break_countdown =()=> {
       <button id="reset" className='reset' onClick={reset}>Reset</button>
 
         </div>
-        <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js' ></script>
-
      </div>
+     <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js' ></script>
+
     </div>
   )
 }
