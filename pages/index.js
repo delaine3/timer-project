@@ -28,6 +28,8 @@ export default function Home() {
         set_break_called(true)
         set_on_break(true)
          document.getElementById("timer-label").innerHTML = "Break"
+         $('.beep').trigger("play");
+
         start_break_countdown()
       }
       
@@ -42,6 +44,7 @@ export default function Home() {
     clearInterval(session_interval)
     set_break_called(false)
     set_break_length(5)
+    $('.beep').load()
 
     set_on_break(false)
     set_session_length(25)
@@ -183,23 +186,18 @@ const start_break_countdown =()=> {
          <button className='decrement' id="break-decrement" name='break-decrement' value={break_length} onClick={(event) => {
         handle_change(event)}} >-</button>
        </div>
-       <ReactAudioPlayer
-  src="my_audio_file.ogg"
-  autoPlay
-  controls
-/>
-
+       <audio className='beep' id='beep' src="https://www.trekcore.com/audio/aliensounds/romulan_computerbeep4.mp3"/>  
+    
        <div className='upper-divs'>
          <label  id="session-label">Session Length</label>
          <p id="session-length"  > {session_length}</p>
 
          <button className='increment' id="session-increment" name='session-increment' value={session_length} onClick={(event) => {
         handle_change(event)}}  >+</button>
-
-         <button className='decrement' id="session-decrement" name='session-decrement' value={session_length} onClick={(event) => {
-        handle_change(event)}}>-</button>
+   <button className='decrement' id="session-decrement" name='session-decrement' value={session_length} onClick={(event) => {
+        handle_change(event)}}  >-</button>
        </div>
-
+<br/>
         <div className='time-remaining'>
           <label id="timer-label" >Session </label>
       <p id="time-left" >{on_break ? break_time_left : session_time_left} </p>
@@ -209,6 +207,7 @@ const start_break_countdown =()=> {
         </div>
      </div>
      <script defer src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js' ></script>
+     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
     </div>
   )
