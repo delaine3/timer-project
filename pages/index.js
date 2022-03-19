@@ -36,7 +36,7 @@ export default function Home() {
       document.getElementById("timer-label").innerHTML = "Session"
 
     }
-  },[on_break]);
+  },[on_break,break_interval]);
 
   const reset =()=>{
     clearInterval(session_interval)
