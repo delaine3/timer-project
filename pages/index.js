@@ -36,7 +36,7 @@ export default function Home() {
       document.getElementById("timer-label").innerHTML = "Session"
 
     }
-  },[]);
+  },[on_break]);
 
   const reset =()=>{
     clearInterval(session_interval)
@@ -206,7 +206,6 @@ const start_break_countdown =()=> {
       <button className={start_stop} id="start_stop" onClick={start}> {is_paused ? "Start" : "Pause"} </button>
 
       <button id="reset" className='reset' onClick={reset}>Reset</button>
-
         </div>
      </div>
      <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js' ></script>
