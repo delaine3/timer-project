@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import ReactAudioPlayer from 'react-audio-player';
 import { useState,useEffect } from 'react'
 
 export default function Home() {
