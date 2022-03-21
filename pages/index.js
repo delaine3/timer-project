@@ -28,6 +28,7 @@ export default function Home() {
         set_break_called(true)
         set_on_break(true)
          document.getElementById("timer-label").innerHTML = "Break"
+         document.getElementById("beep").play()
 
         start_break_countdown()
       }
@@ -43,8 +44,7 @@ export default function Home() {
     clearInterval(session_interval)
     set_break_called(false)
     set_break_length(5)
-    document.getElementById("beep").trigger("play");
-
+    document.getElementById("beep").currentTime = 1;
 
     set_on_break(false)
     set_session_length(25)
