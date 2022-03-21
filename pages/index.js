@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import ReactAudioPlayer from 'react-audio-player';
 import { useState,useEffect } from 'react'
 
 export default function Home() {
@@ -206,6 +207,7 @@ const start_break_countdown =()=> {
         </div>
      </div>
      <script async src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js' ></script>
+     <script async src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
     </div>
   )
