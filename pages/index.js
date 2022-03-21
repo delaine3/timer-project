@@ -205,7 +205,6 @@ const start_break_countdown =()=> {
       <button id="reset" className='reset' onClick={reset}>Reset</button>
         </div>
      </div>
-     <script async src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js' ></script>
      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
     </div>
