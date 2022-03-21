@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import ReactAudioPlayer from 'react-audio-player';
 import { useState,useEffect } from 'react'
 
 export default function Home() {
   const [session_time_left,set_session_time_left] = useState("25:00")
-  const [break_time_left,set_break_time_left] = useState("5:00")
+  const [break_time_left,set_break_time_left] = useState("25:00")
 
   const [session_length, set_session_length] = useState(25)
   const [break_length, set_break_length] = useState(5)
@@ -56,8 +57,6 @@ export default function Home() {
   const start_session_countdown=(countDownDate)=>{
 
     if(!on_break){
-      console.log("IN start_session_countdown, NOT ON BREAK")
-
       set_interval(setInterval(function() {
         // Get today's date and time
         var now = new Date().getTime();
@@ -80,7 +79,7 @@ export default function Home() {
         }
       }, 1000))
     }else{
-      console.log("ON BREAK")
+      console.log("IN start_session_countdown, NOT ON BREAK")
       set_break_interval(setInterval(function() {
         // Get today's date and time
         var now = new Date().getTime();
@@ -90,9 +89,11 @@ export default function Home() {
         // Time calculations for days, hours, minutes and seconds
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = ((distance % (1000 * 60)) / 1000).toFixed(0);
+          console.log(minutes + " " + seconds)
         set_break_time_left( (minutes > 9 ? minutes : "0" + minutes) +":" + (seconds > 9 ? seconds : "0" + seconds) )
           
         set_distance(distance)
+          console.log(break_time_left)
         // If the count down is over, write some text 
         if (minutes <= 0 && seconds <=0 ) {
           clearInterval(break_interval)
@@ -205,6 +206,7 @@ const start_break_countdown =()=> {
       <button id="reset" className='reset' onClick={reset}>Reset</button>
         </div>
      </div>
+     <script defer src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js' ></script>
      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
     </div>
