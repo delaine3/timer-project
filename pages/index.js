@@ -79,7 +79,7 @@ export default function Home() {
         }
       }, 1000))
     }else{
-      console.log("IN start_session_countdown, NOT ON BREAK")
+      console.log(" ON BREAK")
       set_break_interval(setInterval(function() {
         // Get today's date and time
         var now = new Date().getTime();
