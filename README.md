@@ -4,8 +4,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 This is an app similar to the pomodoro timer. Users can set a time to countdown from aswell as a break.
 
 ## Technologies used:
-React
-NodeJS
+- React
+- NodeJS
+- NextJS
 
 [Go to live version of app](https://timer-project-one.vercel.app/)
 
